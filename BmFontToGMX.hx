@@ -84,7 +84,6 @@ class BmFontToGMX {
 							Sys.exit(1);
 						};
 						case "file": {
-							outFont.addValueNode("image", val);
 							var pagePath = Path.directory(fntPath) + "/" + val;
 							if (FileSystem.exists(pagePath)) {
 								var outPath1 = Path.withoutExtension(outPath);
@@ -92,7 +91,8 @@ class BmFontToGMX {
 									outPath1 = Path.withoutExtension(outPath1);
 								}
 								File.copy(pagePath, outPath1 + ".png");
-							}
+								outFont.addValueNode("image", Path.withoutDirectory(outPath1 + ".png"));
+							} else outFont.addValueNode("image", val);
 						};
 					}
 				});
@@ -126,6 +126,8 @@ class BmFontToGMX {
 		for (glyph in glyphs) {
 			if (glyph != rangeNext) {
 				outRanges.addValueNode("range" + rangeNum++, rangeStart + "," + (rangeNext - 1));
+				rangeStart = glyph;
+				rangeNext = glyph + 1;
 			} else rangeNext++;
 		}
 		//
