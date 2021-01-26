@@ -1,6 +1,6 @@
 # BmFontToGMX #
 
-This small program converts [BMFont](http://www.angelcode.com/products/bmfont/)' "text format" `.fnt` font atlas files to GameMaker Studio compatible `.font.gmx` font atlas files.
+This small program converts [BMFont](http://www.angelcode.com/products/bmfont/)'s "text format" `.fnt` font atlas files to GameMaker compatible (`.font.gmx` for GM:S, `.yy` for GMS2+) font atlas files.
 
 This allows to make use of BMFont's numerous settings while having fonts that work as fast as those produced by GameMaker itself.
 
