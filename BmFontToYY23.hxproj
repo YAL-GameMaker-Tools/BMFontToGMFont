@@ -4,7 +4,7 @@
   <output>
     <movie outputType="Application" />
     <movie input="" />
-    <movie path="bin\BmFontToGMX.n" />
+    <movie path="bin\BmFontToYY23.n" />
     <movie fps="0" />
     <movie width="0" />
     <movie height="0" />
@@ -19,7 +19,7 @@
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="" />
+    <option directives="gms2&#xA;gms23" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
     <option mainClass="BmFontToGmFont" />
@@ -32,7 +32,6 @@
   </haxelib>
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>
-    <compile path="src\BmFontToGMX.hx" />
     <compile path="src\BmFontToGmFont.hx" />
   </compileTargets>
   <!-- Paths to exclude from the Project Explorer tree -->
@@ -47,7 +46,7 @@
   <options>
     <option showHiddenPaths="False" />
     <option testMovie="Custom" />
-    <option testMovieCommand="test.bat" />
+    <option testMovieCommand="test_23.bat" />
   </options>
   <!-- Plugin storage -->
   <storage />
